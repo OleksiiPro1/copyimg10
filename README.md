@@ -45,3 +45,7 @@ scrape.request(url, function (err, $) {
     }
 
 });
+
+Try 3:
+
+https://www.npmjs.com/package/axios

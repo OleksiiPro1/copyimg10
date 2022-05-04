@@ -1,5 +1,6 @@
-let request = require('request');
-let url =
-  'https://api.memegen.link/images/bad/your_meme_is_bad/and_you_should_feel_bad.jpg?width=300';
+import axios from 'axios';
 
-request(url, function (err, response, body) {});
+const res = await axios.get(
+  'https://memegen-link-examples-upleveled.netlify.app/',
+);
+console.log(res);

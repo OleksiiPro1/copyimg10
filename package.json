@@ -42,6 +42,7 @@
     "@typescript-eslint/utils": "5.22.0"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "request": "^2.88.2",
     "scrape": "^0.2.3"
   }
