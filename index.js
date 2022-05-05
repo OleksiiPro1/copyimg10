@@ -1,6 +1,8 @@
+import fs, { mkdir } from 'node:fs';
 import axios from 'axios';
+import { fstat } from 'fs';
 
-// Папка с картинками https://api.memegen.link/images/
+// Папка с 10 картинками https://api.memegen.link/images/
 
 const res = await axios.get('https://api.memegen.link/images/');
 console.log(res.data[0].url);
@@ -13,3 +15,11 @@ console.log(res.data[6].url);
 console.log(res.data[7].url);
 console.log(res.data[8].url);
 console.log(res.data[9].url);
+
+//Создаем папку мемы
+
+fs.mkdir('./meme', { recursive: true }, (err) => {
+  console.log(err);
+});
+
+// Загружаем 10 картинок в папку картинки
