@@ -43,9 +43,11 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.10",
     "get-image-urls": "^1.0.5",
     "get-src": "^1.0.1",
     "metadata-scraper": "^0.2.54",
+    "node-fetch": "^3.2.4",
     "request": "^2.88.2",
     "scrape": "^0.2.3"
   }
