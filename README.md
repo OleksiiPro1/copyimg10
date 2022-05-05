@@ -49,3 +49,14 @@ scrape.request(url, function (err, $) {
 Try 3:
 
 https://www.npmjs.com/package/axios
+
+Try 4:
+
+let m,
+urls = [],
+str =
+'<img src="https://api.memegen.link/images/bad/your_meme_is_bad/and_you_should_feel_bad.jpg?width=300">',
+rex = /<img[^>]+src="?([^"\s]+)"?\s\*\/>/g;
+while ( m = rex.exec( str ) ) {
+urls.push( m[1] );
+console.log(urls);
