@@ -1,6 +1,6 @@
 import fs, { mkdir } from 'node:fs';
 import axios from 'axios';
-import { fstat } from 'fs';
+import request from 'request';
 
 // Папка с 10 картинками https://api.memegen.link/images/
 
@@ -23,3 +23,21 @@ fs.mkdir('./meme', { recursive: true }, (err) => {
 });
 
 // Загружаем 10 картинок в папку картинки
+
+process.chdir('meme');
+for (let i = 0; i < 10; i++) {
+  request(
+    {
+      url: res.data[i].url,
+    },
+    function (error, response, body) {
+      let format = 'jpg';
+      fs.writeFile('img' + i + '.' + format, body, function (err) {
+        if (err) {
+          return console.log(err);
+        }
+        console.log('The file was saved! Yessssssssss!');
+      });
+    },
+  );
+}
